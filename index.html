@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Tytuł strony</title>
-		<meta charset="UTF-8"/>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Strona dla M.</title>
+</head>
+<body>
+	<div style="height: 1100px; background-image: url(tlo-1.jpg); background-size: cover">
 		
-	</head>
+		 <form>
+			<table style="margin-left: 100px;">
+				<tr>
+					<td>Imię</td><td><input type="text" id ="imie"/></td>
+				</tr>
+				<tr>
+					<td>Hasło</td><td><input type="password" id ="haslo"/></td>
+				</tr>
+			</table>
+			<br/>
+		 	<button style="margin-left: 146px;" type="button" onclick="verify()">Dalej!</button>
+		 </form>
+		
+	</div>
 	
-	<body>
-		<div>
-		 <h2>Buziak dla Lenki:P</h2>
-		</div>
-		<div>
-			<iframe width="400" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d165125.09880290547!2d21.76772773116459!3d49.709301833756705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473c48ca2a422a0f%3A0x7279237954aa022d!2sKrosno!5e0!3m2!1sen!2spl!4v1526548922899"></iframe>
-		</div>
-		<script src="app4.js"></script>
-	</body>
-
-</html>
+	<script>
+	var dobreImie = false;
+	var imie = document.getElementById("imie");
+	var haslo = document.getElementById("haslo");
+		
+	
+	 function verify(){ 
+	 console.log("Verify: wpisano " + imie.value + ".");
+	 var Name = imie.value.trim().toLowerCase();
+	 console.log("wpisano " + Name + ".");
+	 if(Name == "barbara" || Name == "basia") {
+		dobreImie = true;  
+	   } 
+	 
+    if(!dobreImie){
+	alert("Nie jestes barbarą!");
+	return;}	
+	   
+	   if(haslo.value == "malinka"){
+	    window.location.href = "wlasciwy.html";
+	   } else{
+	   alert("Nieprawidlowe haslo!");
+	   }  
+	 }
+	</script>
+</body>
+<html>

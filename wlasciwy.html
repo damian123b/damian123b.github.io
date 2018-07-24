@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+
+<html lang="pl">
+	<head>
+	<title>Prezencik od Damiana</title>
+		<!--<link type="text/css" rel="stylesheet" href="styl.css"/>-->
+		<meta charset="utf-8"/>
+		
+		<style>
+			body {
+			background-color: #01DF01;
+			}
+
+			#tresc {
+			display: block;
+			}
+
+			h1 {
+			background-color: blue;
+			font-size: 26px;
+			text-align:center;
+			color: yellow;
+			font-size: 66px;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<div style="height:200px; width:100%; clear:both;"></div>
+		<div id="tresc">
+			<h1 id="nagl" style="color: yellow;">Stronka dla Moniki. Pozdrowionka...</h1>
+		</div>
+		<div style="margin-top: 25px; text-align: center;">
+			<button id="przycisk" style="margin-top: 15px; width: 120px; height: 60px; padding left right: auto;" type="button">Kliknij mnie</button>
+			<button id="wyloguj" style="margin-top: 15px; width: 120px; height: 60px; padding left right: auto;" type="button">Wyloguj</button>
+		</div>
+
+		<!--
+		<div>
+			<iframe width="400" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d165125.09880290547!2d21.76772773116459!3d49.709301833756705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473c48ca2a422a0f%3A0x7279237954aa022d!2sKrosno!5e0!3m2!1sen!2spl!4v1526548922899"></iframe>
+		</div>
+		-->
+	<script>
+		var przycisk = document.getElementById("przycisk");
+		var przyciskWyloguj = document.getElementById("wyloguj");
+		var nagl = document.getElementById("nagl");
+		var mojRuch = true;
+		
+		przycisk.addEventListener('click',function(){	
+			 if(mojRuch) { 
+				setTimeout(function(){
+				alert("Uśmiechnij się i znowu kliknij przycisk!"); }, 650);
+			nagl.style.color = "red";
+			nagl.innerHTML = "...od Damiana";
+			przycisk.innerHTML = "No kliknij!";
+			przyciskWyloguj.style.visibility = "hidden";
+			mojRuch = !mojRuch;
+			} else {
+			nagl.innerHTML="Stronka dla Moniki. Pozdrowionka...";
+			nagl.style.color = "yellow";
+			przycisk.innerHTML = "Kliknij mnie!";
+			przyciskWyloguj.style.visibility = "visible";
+			mojRuch = !mojRuch;}
+		},false);
+		
+		przyciskWyloguj.addEventListener('click',function(){
+			window.location.href = "index.html";
+		}, false);
+	
+		</script>
+
+	</body>
+</html>
+		
+		
