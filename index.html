@@ -8,7 +8,7 @@
 	<div style="position:absolute; left:0; right:0; top:0; bottom:0; background-image: url(tlo-1.jpg); background-size: 100%;">
 		
 		 <form>
-			<table style="margin-left: 100px;">
+			<table style="margin-left: 100px; padding-top: 15px;">
 				<tr>
 					<td>Imię</td><td><input type="text" id ="imie"/></td>
 				</tr>
@@ -18,34 +18,10 @@
 			</table>
 			<br/>
 		 	<button style="margin-left: 146px;" type="button" onclick="verify()">Dalej!</button>
-		 </form>
+		 </form ">
 		
 	</div>
 	
-	<script>
-	var dobreImie = false;
-	var imie = document.getElementById("imie");
-	var haslo = document.getElementById("haslo");
-		
-	
-	 function verify(){ 
-	 console.log("Verify: wpisano " + imie.value + ".");
-	 var Name = imie.value.trim().toLowerCase();
-	 console.log("wpisano " + Name + ".");
-	 if(Name == "monika" || Name == "monia") {
-		dobreImie = true;  
-	   } 
-	 
-    if(!dobreImie){
-	alert("Nie jestes Monika!");
-	return;}	
-	   
-	   if(haslo.value == "ainom"){
-	    window.location.href = "wlasciwy.html";
-	   } else{
-	   alert("Nieprawidlowe haslo!");
-	   }  
-	 }
-	</script>
+	<script src="skrypt.js" charset="UTF-8"></script>
 </body>
 <html>
